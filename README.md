@@ -13,3 +13,19 @@ To run this project, you will need to add final static variables in SystemContan
 
 `PASSWORD_DB`
 
+## Config JPA 
+
+If you want to create or drop tables in database
+
+```java
+  properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+```
+
+After create tables, set update during project running
+
+```java
+  properties.setProperty("hibernate.hbm2ddl.auto", "update");
+```
+
+![image](https://github.com/vmdt/moviebooking-springmvc/assets/122994022/034a932a-6db7-411a-b395-8c251082a360)
+
