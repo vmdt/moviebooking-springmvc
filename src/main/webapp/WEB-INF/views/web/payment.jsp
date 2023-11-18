@@ -56,6 +56,7 @@
 					<div class="confirm-payment">
 						<button id="cancel">Cancel</button>
 						<input type="hidden" id="bookingId" name="bookingId" value="${booking.id}">
+						<input type="hidden" id="totalPrice" name="totalPrice" value="${booking.totalPrice}">
 						<button id="pay">Pay</button>
 					</div>
 				</c:if>
@@ -104,11 +105,13 @@
 	        // Ngăn chặn sự kiện mặc định của form
 	        event.preventDefault();
 	        var bookingId = $("#bookingId").val();
+	        var totalPrice = $("#totalPrice").val();
 	        var status = "paid";
 	        
 	        var jsonData = {
 	        		id: bookingId,
-	        		status
+	        		status,
+	        		totalPrice
 	        }
 			
 	       updateBookingAPI(JSON.stringify(jsonData), window.location.origin);

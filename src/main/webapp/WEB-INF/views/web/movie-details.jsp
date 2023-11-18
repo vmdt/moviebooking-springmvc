@@ -74,15 +74,15 @@
 								<div class="anime__review__item__text">
 									<h6>${feedback.fullname}</h6>
 									<p>${feedback.content}</p>
-									<input type="hidden" id="contentEdit" value="${feedback.content}">
+<%-- 									<input type="hidden" id="contentEdit" value="${feedback.content}"> --%>
 									<c:if test="${sessionScope.acc.id == feedback.userId}">
-										<li class="list-inline-item">
+<!-- 										<li class="list-inline-item">
 											<button class="btn btn-success btn-sm rounded-0"
 												id="editFeedback" type="button" data-toggle="tooltip"
 												data-placement="top" title="Edit">
 												<i class="fa fa-edit"></i>
 											</button>
-										</li>
+										</li> -->
 										<li class="list-inline-item">
 											<button class="btn btn-danger btn-sm rounded-0"
 												id="deleteFeedback" type="button" data-toggle="tooltip"
@@ -169,13 +169,13 @@
 	       
 	    });
 	    
-	    // Xử lý khi form được nộp (submit)
+/* 	    // Xử lý khi form được nộp (submit)
 	    $("#editFeedback").click(function(event) {
 	    	var content = $("#contentEdit").val();
 	    	
 			document.getElementById("content").value = content; 
 	       
-	    });
+	    }); */
 	    
 	});
 	</script>

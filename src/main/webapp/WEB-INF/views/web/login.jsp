@@ -54,11 +54,11 @@
 						<h3>Login</h3>
 						<form action="/login" name="user" method="post">
 							<div class="input__item">
-								<input type="text" placeholder="Username" name="username"> <span
+								<input type="text" placeholder="Username" name="username" required> <span
 									class="icon_mail"></span>
 							</div>
 							<div class="input__item">
-								<input type="password" placeholder="Password" name="password"> <span
+								<input type="password" placeholder="Password" name="password" required> <span
 									class="icon_lock"></span>
 							</div>
 							<button type="submit" class="site-btn">Login Now</button>

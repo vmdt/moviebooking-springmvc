@@ -40,15 +40,15 @@
                         <h3>Sign Up</h3>
                         <form action="/signup" name="user" method="post"> 
                             <div class="input__item">
-                                <input type="text" placeholder="Username" name="username">
+                                <input type="text" placeholder="Username" name="username" required>
                                 <span class="icon_mail"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Fullname" name="fullname">
+                                <input type="text" placeholder="Fullname" name="fullname" required>
                                 <span class="icon_profile"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Password" name="password">
+                                <input type="text" placeholder="Password" name="password" required>
                                 <span class="icon_lock"></span>
                             </div>
                             <button type="submit" class="site-btn">Signup Now</button>
