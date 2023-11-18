@@ -16,8 +16,6 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.bookmovie.constant.SystemConstant;
-
 @Configuration
 @EnableJpaRepositories(basePackages = {"com.bookmovie.repository"})
 @EnableTransactionManagement
@@ -48,10 +46,10 @@ public class JPAConfig {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(SystemConstant.DRIVER_DB);
-		dataSource.setUrl(SystemConstant.URL_DB);
-		dataSource.setUsername(SystemConstant.USERNAME_DB);
-		dataSource.setPassword(SystemConstant.PASSWORD_DB);
+		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/moviebooking?useSSL=false");
+		dataSource.setUsername("root");
+		dataSource.setPassword("19001009aA");
 		return dataSource;
 	}
 	
