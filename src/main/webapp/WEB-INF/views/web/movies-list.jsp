@@ -48,7 +48,12 @@
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="product__item">
 							<div class="product__item__pic set-bg"
-								data-setbg="${not empty movie.thumbnail ? movie.thumbnail : "https://dummyimage.com/230x325/dee2e6/6c757d.jpg" }">
+								<c:if test = "${not empty movie.thumbnail}">
+							         data-setbg="<c:url value="${movie.thumbnail}"/>">
+							      </c:if>
+							      <c:if test = "${empty movie.thumbnail}">
+							         data-setbg="https://dummyimage.com/1172x564/dee2e6/6c757d.jpg">
+							      </c:if>
 							</div>
 							<div class="product__item__text">
 								<h5>
@@ -104,9 +109,10 @@
         
         console.log(typeId);
         console.log(nationId);
+        var baseUrl = '${pageContext.request.contextPath}';
         
         // Set the form action with the selected value as a URL parameter
-		 document.getElementById('filter').href = '/movies-list?typeId='+typeId+'&nationId='+nationId;
+		 document.getElementById('filter').href = baseUrl + '/movies-list?typeId='+typeId+'&nationId='+nationId;
 
       }
 	</script>

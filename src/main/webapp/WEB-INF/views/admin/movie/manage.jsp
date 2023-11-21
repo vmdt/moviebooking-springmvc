@@ -196,10 +196,10 @@
 	function uploadImage() {
 		  var fileInput = document.getElementById('fileInput');
 		  var file = fileInput.files[0];
-
+		  var baseUrl = '${pageContext.request.contextPath}';
 		  var formData = new FormData();
 		  formData.append('file', file);
-		  uploadAPI(formData, window.location.origin);	  
+		  uploadAPI(formData, baseUrl);	  
 		}
 
    </script>

@@ -124,14 +124,15 @@
 	        };
 	        
 	        console.log(jsonData);
+	        var baseUrl = '${pageContext.request.contextPath}';
 
 	        if (userId) {
 	        	console.log(userId);
 	        	jsonData.id = userId;
-	            updateUserAPI(JSON.stringify(jsonData), window.location.origin);
+	            updateUserAPI(JSON.stringify(jsonData), baseUrl);
 	        } else {
 	        	console.log(window.location.origin);
-	            createUserAPI(JSON.stringify(jsonData), window.location.origin);
+	            createUserAPI(JSON.stringify(jsonData), baseUrl);
 	        }
 	       
 	    });

@@ -108,13 +108,15 @@
 	        var totalPrice = $("#totalPrice").val();
 	        var status = "paid";
 	        
+	        var baseUrl = '${pageContext.request.contextPath}';
+	        
 	        var jsonData = {
 	        		id: bookingId,
 	        		status,
 	        		totalPrice
 	        }
 			
-	       updateBookingAPI(JSON.stringify(jsonData), window.location.origin);
+	       updateBookingAPI(JSON.stringify(jsonData), baseUrl);
 	        
 	    });
 	</script>

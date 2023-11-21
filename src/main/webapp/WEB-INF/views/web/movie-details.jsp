@@ -139,11 +139,12 @@
 				movieId,
 				content
 	        };
+	        var baseUrl = '${pageContext.request.contextPath}';
 	        
 	        if (!userId) {
 	        	window.location.href = window.location.origin + "/login";
 	        } else {	        	
-	        	createFeedbackAPI(JSON.stringify(jsonData), window.location.origin);
+	        	createFeedbackAPI(JSON.stringify(jsonData), baseUrl);
 	        }
 
 	       

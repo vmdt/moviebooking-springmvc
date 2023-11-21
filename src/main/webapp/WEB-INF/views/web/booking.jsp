@@ -110,14 +110,14 @@
 		        var userId = $("#userId").val();
 		        
 		        console.log(userId);
-		        
+		        var baseUrl = '${pageContext.request.contextPath}';
 		        if (userId) {
 			        var data = {
 			        		userId,
 			        		totalPrice,
 			        		seatIds
 			        }
-		        	createBookingAPI(JSON.stringify(data), window.location.origin);
+		        	createBookingAPI(JSON.stringify(data), baseUrl);
 		        } else {
 		        	window.location.href = "/login";
 		        }

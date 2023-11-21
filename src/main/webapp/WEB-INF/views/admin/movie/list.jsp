@@ -108,13 +108,14 @@ tr:nth-child(odd) {
 												// Ngăn chặn sự kiện mặc định của form
 												event.preventDefault();
 												var confirmResult = confirm("Bạn có chắc chắn muốn xóa không?");
+												var baseUrl = '${pageContext.request.contextPath}';
 												if (confirmResult) {
 													var movieId = $(this).data(
 															"id");
 													console.log(movieId);
 													deleteMovieAPI(
 															movieId,
-															window.location.origin);
+															baseUrl);
 												}
 											});
 						});

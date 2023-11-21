@@ -77,6 +77,8 @@
 	        var phone = $("#phone").val();
 	        var id = $("#userId").val();
 	        var roleId = $("#roleId").val();
+	        
+	        var baseUrl = '${pageContext.request.contextPath}';
 	
 	        // Tạo đối tượng JSON từ dữ liệu
 	        var jsonData = {
@@ -86,7 +88,7 @@
 				phone,
 				roleId
 	        };
-	        updateUserAPI(JSON.stringify(jsonData), window.location.origin);
+	        updateUserAPI(JSON.stringify(jsonData), baseUrl);
 	       
 	    });
 	});

@@ -101,13 +101,14 @@ tr:nth-child(odd) {
 												// Ngăn chặn sự kiện mặc định của form
 												event.preventDefault();
 												var confirmResult = confirm("Bạn có chắc chắn muốn thao tác không?");
+												var baseUrl = '${pageContext.request.contextPath}';
 												if (confirmResult) {
 													var userId = $(this).data(
 															"id");
 													var action = $(this).html();
 													console.log(userId);
 													console.log(action);
-													actionUser(userId, action, window.location.origin);
+													actionUser(userId, action, baseUrl);
 												}
 											});
 						});
