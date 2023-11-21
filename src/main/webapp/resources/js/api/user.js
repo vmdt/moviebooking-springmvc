@@ -14,13 +14,15 @@ function updateUserAPI(data, roleId, rootURL) {
             // Xử lý kết quả trả về từ API ở đây
             if (roleId == 2)
                 window.location.href = `${rootURL}/admin/users?message=success`;
-            window.location.href = `${rootURL}/users/${response.id}?message=success`;
+			else
+            	window.location.href = `${rootURL}/users/${response.id}?message=success`;
         },
         error: function(jqXHR, textStatus, errorThrown) {
             // Xử lý lỗi ở đây
-            if (data.roleId == 2)
+            if (roleId == 2)
                 window.location.href = `${rootURL}/admin/users?message=error`;
-            window.location.href = `${rootURL}/users/${data.id}?message=error`;
+			else
+            	window.location.href = `${rootURL}/users/${data.id}?message=error`;
         }
     });
 }

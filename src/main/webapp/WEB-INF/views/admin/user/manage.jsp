@@ -90,7 +90,7 @@
 						<input type="hidden" id="userId" name="userId"
 							value="${user.id}">
 						<input type="hidden" id="editRole" name="editRole"
-							value="${sessionScope.acc.id}">
+							value="${sessionScope.acc.roleId}">
 
 						<button type="submit" class="submit-button">Save</button>
 					</form>
@@ -132,6 +132,7 @@
 	        if (userId) {
 	        	console.log(userId);
 	        	jsonData.id = userId;
+	        	console.log(editRole);
 	            updateUserAPI(JSON.stringify(jsonData), editRole, baseUrl);
 	        } else {
 	        	console.log(window.location.origin);
