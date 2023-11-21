@@ -13,7 +13,7 @@
 		<div class="container">
 			<div class="hero__slider owl-carousel">
 				<div class="hero__items set-bg"
-					data-setbg="${movies.listMovies[4].thumbnail}">
+					data-setbg="<c:url value="${movies.listMovies[4].thumbnail}"/>">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="hero__text">
@@ -26,7 +26,7 @@
 					</div>
 				</div>
 				<div class="hero__items set-bg"
-					data-setbg="${movies.listMovies[1].thumbnail}">
+					data-setbg="<c:url value="${movies.listMovies[1].thumbnail}"/>">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="hero__text">
@@ -39,7 +39,7 @@
 					</div>
 				</div>
 				<div class="hero__items set-bg"
-					data-setbg="${movies.listMovies[2].thumbnail}">
+					data-setbg="<c:url value="${movies.listMovies[2].thumbnail}"/>">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="hero__text">
@@ -77,7 +77,12 @@
 								<div class="col-lg-4 col-md-6 col-sm-6">
 									<div class="product__item">
 										<div class="product__item__pic set-bg"
-											data-setbg="${not empty movie.thumbnail ? movie.thumbnail : "https://dummyimage.com/230x325/dee2e6/6c757d.jpg" }">
+										      <c:if test = "${not empty movie.thumbnail}">
+										         data-setbg="<c:url value="${movie.thumbnail}"/>">
+										      </c:if>
+										      <c:if test = "${empty movie.thumbnail}">
+										         data-setbg="https://dummyimage.com/1172x564/dee2e6/6c757d.jpg">
+										      </c:if>
 										</div>
 										<div class="product__item__text">
 											<h5>

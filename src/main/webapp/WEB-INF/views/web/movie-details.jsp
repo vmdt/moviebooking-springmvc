@@ -29,7 +29,12 @@
 				<div class="row">
 					<div class="col-lg-3">
 						<div class="anime__details__pic set-bg"
-							data-setbg="${not empty movie.thumbnail ? movie.thumbnail : "https://dummyimage.com/230x325/dee2e6/6c757d.jpg" }">
+							<c:if test = "${not empty movie.thumbnail}">
+						         data-setbg="<c:url value="${movie.thumbnail}"/>">
+						      </c:if>
+						      <c:if test = "${empty movie.thumbnail}">
+						         data-setbg="https://dummyimage.com/1172x564/dee2e6/6c757d.jpg">
+						      </c:if>
 						</div>
 					</div>
 					<div class="col-lg-9">
