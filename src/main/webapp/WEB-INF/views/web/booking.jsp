@@ -31,7 +31,7 @@
 				</div>
 				
 			<div class="bottom-content">
-				<a class="btn-left" href="/movies/${movie.id}" title="Previous">Previous</a>
+				<a class="btn-left" href="<c:url value="/movies/${movie.id}"/>" title="Previous">Previous</a>
 				<div class="booking-info">
 					<ul>
 						<li class="item first">

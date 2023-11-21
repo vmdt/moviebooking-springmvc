@@ -80,7 +80,7 @@
 				<div class="row">
 					<div class="text-center">
 						<div class="normal__breadcrumb__text">
-							<a type="button" class="site-btn" href="/login">Login</a>
+							<a type="button" class="site-btn" href="<c:url value="/login"/>">Login</a>
 						</div>
 					</div>
 				</div>

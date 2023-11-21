@@ -38,7 +38,7 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Sign Up</h3>
-                        <form action="/signup" name="user" method="post"> 
+                        <form action="<c:url value="/signup"/>" name="user" method="post"> 
                             <div class="input__item">
                                 <input type="text" placeholder="Username" name="username" required>
                                 <span class="icon_mail"></span>
@@ -58,7 +58,7 @@
                 <div class="col-lg-6">
           			<div class="login__register">
 						<h3>If You Already Have An Account</h3>
-						<a href="/login" class="primary-btn">Login Now</a>
+						<a href="<c:url value="/login"/>" class="primary-btn">Login Now</a>
 					</div>
                 </div>
             </div>

@@ -52,7 +52,7 @@
 							</div>
 							<div class="product__item__text">
 								<h5>
-									<a href="/movies/${movie.id}">${movie.movieName}</a>
+									<a href="<c:url  value='/movies/${movie.id}'/>">${movie.movieName}</a>
 								</h5>
 							</div>
 						</div>

@@ -13,8 +13,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb__links">
-						<a href="/home"><i class="fa fa-home"></i> Home</a> <a
-							href="/movies-list">Movies</a> <span>${movie.typeName}</span>
+						<a href="<c:url value="/home"/>"><i class="fa fa-home"></i> Home</a> <a
+							href="<c:url value="/movies-list"/>">Movies</a> <span>${movie.typeName}</span>
 					</div>
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 							<div class="anime__details__btn">
 								<a href="https://www.youtube.com/watch?v=ygvNCEbMusE"
 									class="follow-btn"><i></i> trailer</a> <a
-									href="/movies/${movie.id}/seats" class="watch-btn"><span>book
+									href="<c:url value="/movies/${movie.id}/seats"/>" class="watch-btn"><span>book
 										Now</span> <i class="fa fa-angle-right"></i></a>
 							</div>
 						</div>

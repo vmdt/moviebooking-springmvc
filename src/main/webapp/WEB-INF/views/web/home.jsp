@@ -19,7 +19,7 @@
 							<div class="hero__text">
 								<div class="label">${movies.listMovies[4].typeName}</div>
 								<h2>${movies.listMovies[4].movieName}</h2>
-								<a href="/movies/${movies.listMovies[4].id}"><span>Booking Now</span> <i
+								<a href="<c:url value="/movies/${movies.listMovies[4].id}"/>"><span>Booking Now</span> <i
 									class="fa fa-angle-right"></i></a>
 							</div>
 						</div>
@@ -32,7 +32,7 @@
 							<div class="hero__text">
 								<div class="label">${movies.listMovies[1].typeName}</div>
 								<h2>${movies.listMovies[1].movieName}</h2>
-								<a href="/movies/${movies.listMovies[1].id}"><span>Booking Now</span> <i
+								<a href="<c:url value="/movies/${movies.listMovies[1].id}"/>"><span>Booking Now</span> <i
 									class="fa fa-angle-right"></i></a>
 							</div>
 						</div>
@@ -45,7 +45,7 @@
 							<div class="hero__text">
 								<div class="label">${movies.listMovies[2].typeName}</div>
 								<h2>${movies.listMovies[2].movieName}</h2>
-								<a href="/movies/${movies.listMovies[2].id}"><span>Booking Now</span> <i
+								<a href="<c:url value="/movies/${movies.listMovies[2].id}"/>"><span>Booking Now</span> <i
 									class="fa fa-angle-right"></i></a>
 							</div>
 						</div>
@@ -81,7 +81,7 @@
 										</div>
 										<div class="product__item__text">
 											<h5>
-												<a href="/movies/${movie.id}">${movie.movieName}</a>
+												<a href="<c:url value="/movies/${movie.id}"/>">${movie.movieName}</a>
 											</h5>
 										</div>
 									</div>
@@ -90,7 +90,7 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-12">
-								<a type="button" class="site-btn" href="/movies-list">View more</a>
+								<a type="button" class="site-btn" href="<c:url value="/movies-list"/>">View more</a>
 							</div>
 						</div>
 					</div>

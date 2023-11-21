@@ -15,7 +15,7 @@
 				<div class="col-lg-12 text-center">
 					<div class="normal__breadcrumb__text">
 						<h2>Login</h2>
-						<p>Welcome to the official Anime blog.</p>
+						<p>Welcome to the Movie Booking</p>
 					</div>
 				</div>
 			</div>
@@ -52,7 +52,7 @@
 				<div class="col-lg-6">
 					<div class="login__form">
 						<h3>Login</h3>
-						<form action="/login" name="user" method="post">
+						<form action="<c:url value="/login"/>" name="user" method="post">
 							<div class="input__item">
 								<input type="text" placeholder="Username" name="username" required> <span
 									class="icon_mail"></span>
@@ -68,7 +68,7 @@
 				<div class="col-lg-6">
 					<div class="login__register">
 						<h3>Dont’t Have An Account?</h3>
-						<a href="/signup" class="primary-btn">Register Now</a>
+						<a href="<c:url value="/signup"/>" class="primary-btn">Register Now</a>
 					</div>
 				</div>
 			</div>
