@@ -2,7 +2,7 @@
  * 
  */
 
-function updateUserAPI(data, rootURL) {
+function updateUserAPI(data, roleId, rootURL) {
     // Gọi API bằng Ajax
     $.ajax({
         url: `${rootURL}/api/users`, // Thay thế bằng URL thực tế của API
@@ -12,7 +12,7 @@ function updateUserAPI(data, rootURL) {
         dataType: "json", // Xác định kiểu dữ liệu trả về từ API
         success: function(response) {
             // Xử lý kết quả trả về từ API ở đây
-            if (response.roleId == 2)
+            if (roleId == 2)
                 window.location.href = `${rootURL}/admin/users?message=success`;
             window.location.href = `${rootURL}/users/${response.id}?message=success`;
         },

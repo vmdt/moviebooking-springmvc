@@ -166,10 +166,12 @@
 				movieId
 	        };
 	        
+	        var baseUrl = '${pageContext.request.contextPath}';
+	        
 	        if (!userId) {
 	        	window.location.href = window.location.origin + "/login";
 	        } else {	        	
-	        	deleteFeedbackAPI(jsonData, window.location.origin);
+	        	deleteFeedbackAPI(jsonData, baseUrl);
 	        }
 
 	       

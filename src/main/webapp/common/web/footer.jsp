@@ -12,8 +12,8 @@
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href="/project">Homepage</a></li>
-                        <li><a href="#">Categories</a></li>
+                        <li class="active"><a href="<c:url value="/home" />">Homepage</a></li>
+                        <li><a href="<c:url value="/movies-list"/>">Categories</a></li>
                         <li><a href=".#">Our Blog</a></li>
                         <li><a href="#">Contacts</a></li>
                     </ul>

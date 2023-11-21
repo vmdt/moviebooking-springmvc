@@ -88,7 +88,7 @@
 				phone,
 				roleId
 	        };
-	        updateUserAPI(JSON.stringify(jsonData), baseUrl);
+	        updateUserAPI(JSON.stringify(jsonData), 1, baseUrl);
 	       
 	    });
 	});

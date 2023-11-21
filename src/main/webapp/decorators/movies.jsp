@@ -75,7 +75,8 @@
 		    event.preventDefault();
 		    var query = input.value;
 		    console.log(query);
-		    document.getElementById("searchHref").href = window.location.origin + "/movies-list?q=" + query;
+		    var baseUrl = '${pageContext.request.contextPath}';
+		    document.getElementById("searchHref").href = baseUrl + "/movies-list?q=" + query;
 		    document.getElementById("searchHref").click();
 		}
 	});

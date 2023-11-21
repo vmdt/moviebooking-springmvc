@@ -68,7 +68,7 @@
 						<div class="form-group">
 							<label for="phone">Phone:</label> <input type="text"
 								id="phone" name="phone"
-								<c:if test="${not empty movie.phone}">
+								<c:if test="${not empty user.phone}">
                 		value="${user.phone}"
             		</c:if> />
 						</div>
@@ -89,6 +89,8 @@
 
 						<input type="hidden" id="userId" name="userId"
 							value="${user.id}">
+						<input type="hidden" id="editRole" name="editRole"
+							value="${sessionScope.acc.id}">
 
 						<button type="submit" class="submit-button">Save</button>
 					</form>
@@ -114,6 +116,7 @@
 	        var phone = $("#phone").val();
 	        var roleId = $("#roleId").val();
 	        var userId = $("#userId").val();
+	        var editRole = $("#editRole").val();
 	
 	        // Tạo đối tượng JSON từ dữ liệu
 	        var jsonData = {
@@ -129,7 +132,7 @@
 	        if (userId) {
 	        	console.log(userId);
 	        	jsonData.id = userId;
-	            updateUserAPI(JSON.stringify(jsonData), baseUrl);
+	            updateUserAPI(JSON.stringify(jsonData), editRole, baseUrl);
 	        } else {
 	        	console.log(window.location.origin);
 	            createUserAPI(JSON.stringify(jsonData), baseUrl);
