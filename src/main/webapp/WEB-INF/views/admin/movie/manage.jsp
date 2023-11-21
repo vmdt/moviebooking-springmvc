@@ -3,7 +3,7 @@
 	pageEncoding="UTF-8"%>
 
 <c:url var="movieAPI" value="/api/movies" />
-<c:url var="rootURL" value="" />
+<c:url var="rootURL" value="/" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -179,13 +179,15 @@
 	            actors,
 	            language
 	        };
+	        
+	        var baseUrl = '${pageContext.request.contextPath}';
 
 	        if (movieId) {
 	        	console.log(movieId);
 	        	jsonData.id = movieId;
-	            updateMovieAPI(JSON.stringify(jsonData), window.location.origin);
+	            updateMovieAPI(JSON.stringify(jsonData), baseUrl);
 	        } else {
-	            createMoiveAPI(JSON.stringify(jsonData), window.location.origin);
+	            createMoiveAPI(JSON.stringify(jsonData), baseUrl);
 	        }
 	       
 	    });
