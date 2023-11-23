@@ -2,6 +2,7 @@ package com.bookmovie.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -24,7 +25,7 @@ public class SeatEntity extends BaseEntity {
 	@JoinColumn(name = "movie_id")
 	private MovieEntity movie;
 	
-	@OneToMany(mappedBy = "seat")
+	@OneToMany(mappedBy = "seat", cascade=CascadeType.ALL, orphanRemoval=true)
 	private List<BookingDetailsEntity> bookingDetails;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
