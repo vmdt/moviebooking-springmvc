@@ -47,9 +47,9 @@ public class JPAConfig {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/moviebooking?allowPublicKeyRetrieval=true&useSSL=false");
-		dataSource.setUsername("root");
-		dataSource.setPassword("19001009aA");
+		dataSource.setUrl("jdbc:mysql://t07cxyau6qg7o5nz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/yejkrznlqcmogm13?allowPublicKeyRetrieval=true&useSSL=false");
+		dataSource.setUsername("l6wfpswjly6sue5e");
+		dataSource.setPassword("y3q07nt3fmf70auy");
 		return dataSource;
 	}
 	
