@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar -Dserver.port=$PORT target/bookmovie.com.jar
+web: java $JAVA_OPTS -war -Dserver.port=$PORT target/bookmovie.com-0.0.1-SNAPSHOT.war
