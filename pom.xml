@@ -6,6 +6,7 @@
 	<artifactId>bookmovie.com</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+	<name>bookmovie.com</name>
 	<properties>
 		<servlet.api.version>3.1.0</servlet.api.version>
 		<springframework.version>4.3.13.RELEASE</springframework.version>
@@ -183,9 +184,9 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>com.github.jsimone</groupId>
+									<groupId>com.heroku</groupId>
 									<artifactId>webapp-runner</artifactId>
-									<version>9.0.13.0</version>
+									<version>9.0.83.0</version>
 									<destFileName>webapp-runner.jar</destFileName>
 								</artifactItem>
 							</artifactItems>

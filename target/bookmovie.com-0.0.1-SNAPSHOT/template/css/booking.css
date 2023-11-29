@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+
+
+
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 26px;
+  width: 32px;
+  margin: 3px;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+}
+.seatShowcase{
+background-color: #444451;
+  height: 26px;
+  width: 32px;
+  margin: 3px;
+  font-size: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.seatShowcase.selected {
+  background-color: green;
+}
+
+.seat.selected {
+  background-color: green;
+}
+.seat.sold {
+  background-color: #fff;
+}
+.seatShowcase.sold {
+  background-color: #fff;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+.seat:nth-of-type(1) {
+    margin-left: 330px;
+  }
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+.seatShowcase:nth-of-type(1){
+    margin-left: 50px;
+    
+}
+.seat:not(.sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.showcase .seat:not(.sold):hover {
+  cursor: default;
+  transform: scale(1);
+}
+.booking{
+  padding-top: 10px;
+}
+.booking {
+  overflow: hidden;
+}
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+ 
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.showcase li small {
+  margin-left: 5px;
+}
+
+.rows {
+  display: flex;
+}
+
+.screen {
+    height: 70px;
+    width: 100%;
+    margin: 30px 0;
+
+  
+}
+
+.text{
+  margin: 1px 0;
+  position: relative;
+  height: 100px;
+  font-size: 16px;
+  display: flex;
+  color: white;
+}
+
+p.text span{
+    color: rgb(158, 248, 158);
+}
+.booking-process{
+  width: 100%;
+  border: 1px solid #d4d3c9;
+  position: relative;
+  display: block;
+  margin-bottom: 150px;
+  margin-top: 100px;
+}
+
+.booking-info img{
+  width: 74px;
+  height: 108px;
+  display: inline-block;
+}
+.booking-info .item {
+  display: inline-block;
+  width: 32%;
+  margin-left: 1%;
+  font-size: 15px;
+}
+.booking-info .movie-detail {
+  padding-top: 10px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 10px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.booking-info- ul {
+  width: 100%;
+}
+.bottom-content {
+  background-color: #000;
+  margin-top: 30px;
+  font-size: 0;
+}
+.booking-info {
+  font-size: 0;
+  color: #cccccc;
+  width: 910px;
+  display: inline-block;
+  margin: 0 3px;
+}
+.label-movie{
+  font-weight: normal;
+  position: fixed;
+}
+.movie-content td {
+  padding: 0 5px;
+  font-weight: bold;
+  white-space: normal;
+  vertical-align: top;
+}
+col {
+  display: table-column;
+}
+.btn-left, .btn-right {
+  float: none;
+  border: none;
+  width: 106px;
+  display: inline-block;
+  margin: 0 0 0 3px;
+  height: 108px;
+  vertical-align: top;
+  background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/bg-cgv-button-process.png) no-repeat;
+}
+.btn-right {
+    background-position: -150px -110px;
+}
+.btn-left {
+  background-position: -152px 0;
+}
+a {
+  color: #e71a0f;
+  text-decoration: none;
+}
+a, button {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul.dropbox {
+  display: none;
+  list-style-type: none;
+  
+}
+.info{
+  width: 300px;
+}
+  
